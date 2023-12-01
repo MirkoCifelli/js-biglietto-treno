@@ -9,20 +9,23 @@
 const km = prompt(`Dimmi quanti km devi per`);
 console.log(`km`,km,typeof km);
 
+if (isNaN(km)){
+    alert(`Scrivi un numero`);
+}
 
 const età = prompt(`Dimmi la tua età`);
 console.log(`età`,età,typeof età);
 
+ if (isNaN(età)){
+     alert(`Scrivi un numero`);
+ }
 
 const price = (km * 0.21)
 console.log (`price`, price, typeof price)
 
 
+// inizio if
 
-let full;
-
-if (isNaN(età)){
-    alert(`Scrivi in numero`);
 if ( età > 65 ){
     full = (price * 0.6).toFixed(2);
 }
@@ -32,11 +35,11 @@ else if ( età < 18){
 else{
     full = price.toFixed(2);
 }
-}
+
 
 console.log(full);
 
-
+ document.getElementById(`my-id`).innerHTML += full + ' $'
 
 
 
